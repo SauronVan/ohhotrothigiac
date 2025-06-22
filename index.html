@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oh – Hỗ Trợ Thị Giác</title>
+  <style>
+    :root {
+      --main-bg: #1b1b1b;
+      --text-color: #f5f5f5;
+      --accent: #b00020;
+      --card-bg: #2b2b2b;
+      --accent-light: #e53935;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      background: var(--main-bg);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+      line-height: 1.75;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(27, 27, 27, 0.95);
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 18px 0;
+      z-index: 100;
+      border-bottom: 1px solid #333;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('header-bg.jpg') center/cover no-repeat;
+      text-align: center;
+      padding: 150px 20px 100px;
+    }
+
+    header img.icon {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      color: var(--accent-light);
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    .btns {
+      margin-top: 30px;
+    }
+
+    .btns a {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 24px;
+      background: var(--accent);
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btns a:hover {
+      background: var(--accent-light);
+    }
+
+    section {
+      padding: 100px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--accent-light);
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 20px;
+      background: var(--card-bg);
+      padding: 20px;
+      border-left: 5px solid var(--accent);
+      border-radius: 6px;
+    }
+
+    .tutorial p {
+      margin-bottom: 16px;
+      background: var(--card-bg);
+      padding: 15px 20px;
+      border-left: 4px solid var(--accent-light);
+      border-radius: 5px;
+    }
+    .donate-button {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: background 0.3s;
+    }
+    .donate-button:hover {
+      background: #d32f2f;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 12px;
+      }
+    }
+    footer {
+      background: #d3d3d3; /* light grey */
+      color: #000; /* chữ đen cho dễ đọc trên nền sáng */
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#intro">Giới thiệu</a>
+  <a href="#features">Tính năng</a>
+  <a href="#tutorial">Hướng dẫn</a>
+  <a href="#donate">Ủng Hộ</a>
+</nav>
+
+<header id="intro">
+  <img src="app_icon.png" alt="Oh App Icon" class="icon">
+  <h1>Oh – Hỗ Trợ Thị Giác</h1>
+  <p>Một ứng dụng hỗ trợ người khiếm thị bằng nhận diện vật thể thời gian thực và phản hồi rung.</p>
+  <div class="btns">
+    <a href="https://github.com/SauronVan/Oh" target="_blank">GitHub</a>
+    <a href="https://play.google.com/store/apps/details?id=com.sauronvan.ai_object_detector" target="_blank">Google Play</a>
+    <a href="https://drive.google.com/drive/folders/1YDT0RmH3nZvYotwVRCuVK6wr89kC2QZ5?usp=sharing" target="_blank">Tải APK</a>
+  </div>
+</header>
+
+<section id="features">
+  <h2>Tính năng nổi bật</h2>
+  <ul>
+    <li><strong>Tìm Vật:</strong> Kích hoạt bằng giọng nói, người dùng có thể yêu cầu tìm các vật như chìa khóa, ví,... Ứng dụng xác nhận qua âm thanh và sử dụng camera sau để nhận diện vật thể. Khi phát hiện đúng vật, máy sẽ rung – mức độ rung mạnh hơn khi đến gần vật, giúp người dùng định hướng không cần nhìn.</li>
+    
+    <li><strong>Xung Quanh:</strong> Ứng dụng mô tả không gian trước mắt qua giọng nói. Camera nhận diện vật thể và nói tên vật cùng vị trí tương đối (trái, giữa, phải), giúp người dùng cảm nhận bố cục không gian xung quanh.</li>
+    
+    <li><strong>Hoạt động ngoại tuyến:</strong> Tất cả xử lý được thực hiện trên thiết bị, không cần Internet. Điều này giúp tiết kiệm dữ liệu, bảo vệ quyền riêng tư và vẫn đảm bảo hiệu năng cao.</li>
+    
+    <li><strong>Hồi đáp xúc giác thông minh:</strong> Cường độ và thời gian rung tỷ lệ thuận với khoảng cách đến vật mục tiêu, tăng khả năng định vị một cách trực quan.</li>
+    
+    <li><strong>Giao diện đơn giản và dễ dùng:</strong> Thiết kế tập trung vào khả năng tiếp cận cho người khiếm thị, với bố cục rõ ràng, điều hướng đơn giản và hỗ trợ âm thanh đầy đủ.</li>
+
+    <li><strong>Đa nền tảng:</strong> Xây dựng bằng Flutter, ứng dụng có thể triển khai trên cả Android và iOS, tăng khả năng tiếp cận cho nhiều người dùng hơn.</li>
+  </ul>
+</section>
+
+<section id="tutorial" class="tutorial">
+  <h2>Hướng dẫn sử dụng</h2>
+  <p>• Mở ứng dụng và chọn <strong>Tìm Vật</strong> để bắt đầu.</p>
+  <p>• Nói tên vật cần tìm, ví dụ: “tìm cái chai nước” hoặc “đâu là cái ghế?”.</p>
+  <p>• Ứng dụng sẽ xác nhận lại bằng giọng nói.</p>
+  <p>• Camera sẽ bắt đầu quét môi trường xung quanh bạn.</p>
+  <p>• Khi phát hiện đúng vật, điện thoại sẽ rung nhẹ, càng đến gần vật thì rung càng mạnh.</p>
+  <p>• Di chuyển chậm quanh không gian để tìm hướng rung mạnh nhất.</p>
+  <p>• Bạn cũng có thể chọn chế độ <strong>Xung Quanh</strong> để nghe mô tả về các vật thể đang xuất hiện trong tầm nhìn camera.</p>
+  <p>• Nhấn vào biểu tượng loa để nghe mô tả từng vùng (trái – giữa – phải).</p>
+  <p>• Khi muốn dừng lại, bạn có thể nhấn nút quay lại hoặc về màn hình chính.</p>
+  <p>• Ứng dụng có thể dùng mọi lúc mọi nơi mà không cần mạng, kể cả khi đang ngoại tuyến.</p>
+</section>
+
+<section id="donate">
+  <h2>Ủng hộ và lan tỏa</h2>
+  <p>
+    <strong>Oh – Hỗ Trợ Thị Giác</strong> là ứng dụng hoàn toàn miễn phí, hỗ trợ người khiếm thị xác định vật thể xung quanh. 
+    Với công nghệ AI và mô hình YOLOv8, mọi xử lý đều diễn ra ngoại tuyến nhằm bảo vệ quyền riêng tư và tăng tính tiện lợi.
+  <p>
+    Mọi khoản đóng góp đều giúp cải thiện độ chính xác, mở rộng tính năng và tiếp cận đến nhiều người cần hơn.
+  </p>
+  <div style="text-align: center;">
+    <a class="donate-button" href="https://www.paypal.com/donate" target="_blank">Ủng hộ ngay</a>
+  </div>
+</section>
+</body>
+<footer>
+  &copy; 2025 Van Chau-Huy. All rights reserved.
+</footer>
+</html>
